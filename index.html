@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pham Thi Uyen - CV</title>
+    <title>Curriculum Vitae | Uyenlun</title>
     <link rel="icon" href="./assets/images/icon.png">
 
     <style>
@@ -25,7 +25,8 @@
         }
 
         .page-container {
-            width: 210mm;
+            max-width: 210mm;
+            width: 100%;
             min-height: 297mm;
             background: white;
             margin: 0 auto;
@@ -48,7 +49,6 @@
             margin-bottom: 8px;
             color: #1a1a1a;
         }
-
 
         .position-title {
             font-size: 18px;
@@ -96,6 +96,8 @@
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 3px;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .position {
@@ -116,6 +118,7 @@
             font-style: italic;
             color: #666;
             font-weight: 400;
+            white-space: nowrap;
         }
 
         .description {
@@ -175,6 +178,203 @@
         .link {
             font-style: italic;
             color: #1a1a1a;
+            word-break: break-all;
+        }
+
+        /* Tablet styles */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .page-container {
+                padding: 20px;
+                min-height: auto;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .name {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .position-title {
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+
+            .section-title {
+                font-size: 14px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .skills-grid>div:nth-child(odd) {
+                font-weight: 600;
+                margin-top: 12px;
+                margin-bottom: 4px;
+            }
+
+            .description {
+                margin-left: 10px;
+            }
+
+            .description ul {
+                margin-left: 10px;
+            }
+
+            .project-details {
+                margin-left: 10px;
+            }
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 10px 8px;
+            }
+
+            .page-container {
+                padding: 15px;
+                border-radius: 4px;
+            }
+
+            .name {
+                font-size: 20px;
+                letter-spacing: 0.5px;
+                line-height: 1.2;
+            }
+
+            .position-title {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+            }
+
+            .contact-info {
+                font-size: 11px;
+                line-height: 1.5;
+            }
+
+            .section {
+                margin-bottom: 16px;
+            }
+
+            .section-title {
+                font-size: 13px;
+                letter-spacing: 0.5px;
+            }
+
+            .entry-header {
+                /* flex-direction: column; */
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .date {
+                align-self: flex-end;
+                margin-top: -4px;
+            }
+
+            .position,
+            .company {
+                font-size: 12px;
+            }
+
+            .description {
+                font-size: 11px;
+                margin-left: 8px;
+            }
+
+            .description ul {
+                margin-left: 8px;
+            }
+
+            .project-header {
+                font-size: 12px;
+                line-height: 1.3;
+            }
+
+            .project-details {
+                font-size: 11px;
+                margin-left: 8px;
+            }
+
+            .tech-stack {
+                font-size: 11px;
+                line-height: 1.3;
+            }
+
+            .skills-grid {
+                font-size: 11px;
+            }
+
+            .link {
+                font-size: 11px;
+                word-break: break-word;
+                display: inline-block;
+                max-width: 100%;
+            }
+        }
+
+        /* Very small screens */
+        @media screen and (max-width: 320px) {
+            .page-container {
+                padding: 12px;
+            }
+
+            .name {
+                font-size: 18px;
+            }
+
+            .position-title {
+                font-size: 13px;
+            }
+
+            .contact-info {
+                font-size: 10px;
+            }
+
+            .section-title {
+                font-size: 12px;
+            }
+
+            .position,
+            .company {
+                font-size: 11px;
+            }
+
+            .description,
+            .project-details {
+                font-size: 10px;
+            }
+
+            .tech-stack {
+                font-size: 10px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .page-container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 15mm;
+                max-width: none;
+                width: 100%;
+            }
+
+            .link {
+                color: #1a1a1a !important;
+                text-decoration: underline;
+            }
         }
     </style>
 </head>
@@ -183,8 +383,7 @@
     <div class="page-container">
         <div class="header">
             <div class="name">Pham Thi Uyen</div>
-            <div class="position-title">Backend Developer
-            </div>
+            <div class="position-title">Backend Developer</div>
 
             <div class="contact-info">
                 My Dinh, Nam Tu Liem, Hanoi, Vietnam<br>
@@ -206,7 +405,7 @@
                 </div>
                 <div class="description">
                     • GPA: 3.56/4.0<br>
-                    • Graduated with distinction with a Bachelor’s degree in Information Technology.
+                    • Graduated with distinction with a Bachelor's degree in Information Technology.
                 </div>
             </div>
         </div>
