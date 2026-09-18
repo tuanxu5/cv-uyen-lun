@@ -1,747 +1,777 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curriculum Vitae | Uyenlun</title>
-    <link rel="icon" href="./assets/images/icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculum Vitae | Uyenlun</title>
+  <link rel="icon" href="./assets/images/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:
+        "Outfit",
+        "Segoe UI",
+        "Roboto",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+      line-height: 1.4;
+      color: #333;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px 20px;
+      min-height: 100vh;
+    }
+
+    .page-container {
+      max-width: 210mm;
+      width: 100%;
+      min-height: 297mm;
+      background: white;
+      margin: 0 auto;
+      padding: 10mm 12mm;
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .header {
+      text-align: left;
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+      color: #1a1a1a;
+    }
+
+    .position-title {
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      width: fit-content;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .contact-info {
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 400;
+      color: #555;
+    }
+
+    .section {
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #1a1a1a;
+      margin-bottom: 10px;
+      padding-bottom: 3px;
+      color: #1a1a1a;
+    }
+
+    .entry {
+      margin-bottom: 10px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .position {
+      font-weight: 400;
+      font-size: 13px;
+      color: #1a1a1a;
+      font-style: italic;
+    }
+
+    .company {
+      font-style: italic;
+      font-size: 13px;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .date {
+      font-size: 12px;
+      font-style: italic;
+      color: #666;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .description {
+      font-size: 12px;
+      margin-left: 0;
+      font-weight: 400;
+      color: #1a1a1a;
+    }
+
+    .description ul {
+      list-style-type: disc;
+      margin-left: 15px;
+    }
+
+    .description li {
+      margin-bottom: 2px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .skill-category {
+      margin-bottom: 10px;
+    }
+
+    .skill-category strong {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .project-header {
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: #1a1a1a;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    .project-details {
+      font-size: 12px;
+      margin-left: 0;
+      line-height: 1.4;
+      color: #1a1a1a;
+    }
+
+    .project-details ul {
+      list-style-type: disc;
+      margin-left: 15px;
+    }
+
+    .project-details li {
+      margin-bottom: 2px;
+    }
+
+    .tech-stack {
+      font-style: italic;
+      margin-bottom: 4px;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .link {
+      font-style: italic;
+      color: #1a1a1a;
+      word-break: break-all;
+    }
+
+    /* Tablet styles */
+    @media screen and (max-width: 768px) {
       body {
-        font-family:
-          "Outfit",
-          "Segoe UI",
-          "Roboto",
-          -apple-system,
-          BlinkMacSystemFont,
-          sans-serif;
-        line-height: 1.4;
-        color: #333;
-        background: #f5f5f5;
-        margin: 0;
-        padding: 40px 20px;
-        min-height: 100vh;
+        padding: 20px 15px;
       }
 
       .page-container {
-        max-width: 210mm;
-        width: 100%;
-        min-height: 297mm;
-        background: white;
-        margin: 0 auto;
-        padding: 20mm;
-        box-shadow:
-          0 8px 24px rgba(0, 0, 0, 0.15),
-          0 2px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-
-      .header {
-        text-align: center;
-        padding-bottom: 8px;
-        margin-bottom: 25px;
+        padding: 20px;
+        min-height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
       .name {
-        font-size: 28px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 8px;
-        color: #1a1a1a;
+        font-size: 24px;
+        letter-spacing: 1px;
       }
 
       .position-title {
-        font-size: 18px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #1a1a1a;
-        border-bottom: 2px solid #1a1a1a;
-        width: fit-content;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        margin-bottom: 16px;
-      }
-
-      .contact-info {
-        font-size: 12px;
-        line-height: 1.4;
-        font-weight: 400;
-        color: #555;
-      }
-
-      .section {
-        margin-bottom: 20px;
+        font-size: 16px;
+        letter-spacing: 1px;
       }
 
       .section-title {
-        font-size: 15px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-bottom: 2px solid #1a1a1a;
-        margin-bottom: 12px;
-        padding-bottom: 4px;
-        color: #1a1a1a;
-      }
-
-      .entry {
-        margin-bottom: 12px;
-      }
-
-      .entry-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 3px;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .position {
-        font-weight: 600;
-        font-size: 13px;
-        color: #1a1a1a;
-      }
-
-      .company {
-        font-style: italic;
-        font-size: 13px;
-        color: #1a1a1a;
-        font-weight: 500;
-      }
-
-      .date {
-        font-size: 12px;
-        font-style: italic;
-        color: #666;
-        font-weight: 400;
-        white-space: nowrap;
-      }
-
-      .description {
-        font-size: 12px;
-        margin-left: 15px;
-        font-weight: 400;
-        color: #1a1a1a;
-      }
-
-      .description ul {
-        list-style-type: disc;
-        margin-left: 15px;
-      }
-
-      .description li {
-        margin-bottom: 2px;
+        font-size: 14px;
       }
 
       .skills-grid {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 16px;
-        font-size: 12px;
+        grid-template-columns: 1fr;
+        gap: 4px;
       }
 
-      .skill-category {
-        margin-bottom: 10px;
-      }
-
-      .skill-category strong {
-        font-size: 12px;
+      .skills-grid>div:nth-child(odd) {
         font-weight: 600;
-        color: #1a1a1a;
-      }
-
-      .project-header {
-        font-weight: 600;
-        font-size: 13px;
+        margin-top: 12px;
         margin-bottom: 4px;
-        color: #1a1a1a;
+      }
+
+      .description {
+        margin-left: 10px;
+      }
+
+      .description ul {
+        margin-left: 10px;
       }
 
       .project-details {
+        margin-left: 10px;
+      }
+    }
+
+    /* Mobile styles */
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 10px 8px;
+      }
+
+      .page-container {
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      .name {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+      }
+
+      .position-title {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+
+      .contact-info {
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+      .section {
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+      }
+
+      .entry-header {
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .date {
+        align-self: flex-end;
+        margin-top: -4px;
+      }
+
+      .position,
+      .company {
         font-size: 12px;
-        margin-left: 15px;
-        line-height: 1.4;
-        color: #1a1a1a;
+      }
+
+      .description {
+        font-size: 11px;
+        margin-left: 8px;
+      }
+
+      .description ul {
+        margin-left: 8px;
+      }
+
+      .project-header {
+        font-size: 12px;
+        line-height: 1.3;
+      }
+
+      .project-details {
+        font-size: 11px;
+        margin-left: 8px;
       }
 
       .tech-stack {
-        font-style: italic;
-        margin-bottom: 4px;
-        color: #1a1a1a;
-        font-weight: 500;
+        font-size: 11px;
+        line-height: 1.3;
+      }
+
+      .skills-grid {
+        font-size: 11px;
       }
 
       .link {
-        font-style: italic;
-        color: #1a1a1a;
-        word-break: break-all;
+        font-size: 11px;
+        word-break: break-word;
+        display: inline-block;
+        max-width: 100%;
+      }
+    }
+
+    /* Very small screens */
+    @media screen and (max-width: 320px) {
+      .page-container {
+        padding: 12px;
       }
 
-      /* Tablet styles */
-      @media screen and (max-width: 768px) {
-        body {
-          padding: 20px 15px;
-        }
-
-        .page-container {
-          padding: 20px;
-          min-height: auto;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .name {
-          font-size: 24px;
-          letter-spacing: 1px;
-        }
-
-        .position-title {
-          font-size: 16px;
-          letter-spacing: 1px;
-        }
-
-        .section-title {
-          font-size: 14px;
-        }
-
-        .skills-grid {
-          grid-template-columns: 1fr;
-          gap: 4px;
-        }
-
-        .skills-grid > div:nth-child(odd) {
-          font-weight: 600;
-          margin-top: 12px;
-          margin-bottom: 4px;
-        }
-
-        .description {
-          margin-left: 10px;
-        }
-
-        .description ul {
-          margin-left: 10px;
-        }
-
-        .project-details {
-          margin-left: 10px;
-        }
+      .name {
+        font-size: 18px;
       }
 
-      /* Mobile styles */
-      @media screen and (max-width: 480px) {
-        body {
-          padding: 10px 8px;
-        }
-
-        .page-container {
-          padding: 15px;
-          border-radius: 4px;
-        }
-
-        .name {
-          font-size: 20px;
-          letter-spacing: 0.5px;
-          line-height: 1.2;
-        }
-
-        .position-title {
-          font-size: 14px;
-          letter-spacing: 0.5px;
-        }
-
-        .contact-info {
-          font-size: 11px;
-          line-height: 1.5;
-        }
-
-        .section {
-          margin-bottom: 16px;
-        }
-
-        .section-title {
-          font-size: 13px;
-          letter-spacing: 0.5px;
-        }
-
-        .entry-header {
-          align-items: flex-start;
-          gap: 4px;
-        }
-
-        .date {
-          align-self: flex-end;
-          margin-top: -4px;
-        }
-
-        .position,
-        .company {
-          font-size: 12px;
-        }
-
-        .description {
-          font-size: 11px;
-          margin-left: 8px;
-        }
-
-        .description ul {
-          margin-left: 8px;
-        }
-
-        .project-header {
-          font-size: 12px;
-          line-height: 1.3;
-        }
-
-        .project-details {
-          font-size: 11px;
-          margin-left: 8px;
-        }
-
-        .tech-stack {
-          font-size: 11px;
-          line-height: 1.3;
-        }
-
-        .skills-grid {
-          font-size: 11px;
-        }
-
-        .link {
-          font-size: 11px;
-          word-break: break-word;
-          display: inline-block;
-          max-width: 100%;
-        }
+      .position-title {
+        font-size: 13px;
       }
 
-      /* Very small screens */
-      @media screen and (max-width: 320px) {
-        .page-container {
-          padding: 12px;
-        }
-
-        .name {
-          font-size: 18px;
-        }
-
-        .position-title {
-          font-size: 13px;
-        }
-
-        .contact-info {
-          font-size: 10px;
-        }
-
-        .section-title {
-          font-size: 12px;
-        }
-
-        .position,
-        .company {
-          font-size: 11px;
-        }
-
-        .description,
-        .project-details {
-          font-size: 10px;
-        }
-
-        .tech-stack {
-          font-size: 10px;
-        }
+      .contact-info {
+        font-size: 10px;
       }
 
-      /* Print styles */
-      @media print {
-        body {
-          background: white;
-          padding: 0;
-        }
-
-        .page-container {
-          box-shadow: none;
-          border-radius: 0;
-          padding: 15mm;
-          max-width: none;
-          width: 100%;
-        }
-
-        .link {
-          color: #1a1a1a !important;
-          text-decoration: underline;
-        }
+      .section-title {
+        font-size: 12px;
       }
-    </style>
-  </head>
 
-  <body>
-    <div class="page-container">
-      <div class="header">
-        <div class="name">Pham Thi Uyen</div>
-        <div class="position-title">Backend Developer</div>
+      .position,
+      .company {
+        font-size: 11px;
+      }
 
-        <div class="contact-info">
-          My Dinh, Nam Tu Liem, Hanoi, Vietnam<br />
-          Phone: +84 346 795 326 | Email: thiuyen1132004@gmail.com
-        </div>
-        <div class="contact-info">
-          GitHub:
-          <a class="link" href="https://github.com/Uyenlun113" target="_blank">https://github.com/Uyenlun113</a>
-        </div>
+      .description,
+      .project-details {
+        font-size: 10px;
+      }
+
+      .tech-stack {
+        font-size: 10px;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 15mm;
+        max-width: none;
+        width: 100%;
+      }
+
+      .link {
+        color: #1a1a1a !important;
+        text-decoration: underline;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="header">
+      <div class="name">Pham Thi Uyen</div>
+      <div class="position-title">Backend Developer</div>
+      <div class="contact-info">
+        Phone: +84 346 795 326 <br />
+        Email: thiuyen1132004@gmail.com <br />
+        GitHub: https://github.com/Uyenlun113<br />
+        Address: My Dinh, Tu Liem, Hanoi, Vietnam
       </div>
+    </div>
 
-      <div class="section">
-        <div class="section-title">Summary</div>
-        <div class="description">
-          Backend Developer with 2+ years of experience building scalable web applications and robust backend systems.
-          Specialized in Node.js ecosystem (Node.js, NestJS, ExpressJS) with hands-on experience designing RESTful APIs,
-          database architecture, and backend integrations. Passionate about clean architecture, system scalability, and
-          continuously improving technical skills in backend development.
-        </div>
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <div class="description">
+        Backend Developer with 2.5+ years of experience building scalable web applications and robust backend systems,
+        with additional hands-on experience in frontend development for web applications. Specialized in Node.js
+        ecosystem (Node.js, NestJS, ExpressJS) for backend development, along with working knowledge of ReactJS and
+        Next.js for building responsive user interfaces. Experienced in designing RESTful APIs, database architecture,
+        backend integrations, and collaborating across the full development lifecycle. Passionate about clean
+        architecture, system scalability, performance optimization, and growing toward a Fullstack Developer role.
       </div>
+    </div>
 
-      <div class="section">
-        <div class="section-title">Skills</div>
-        <div class="skills-grid">
-          <div><strong>Programming Languages:</strong></div>
-          <div>JavaScript, TypeScript, PHP, HTML5, CSS3</div>
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <div class="skills-grid">
+        <div><strong>Programming Languages:</strong></div>
+        <div>JavaScript, TypeScript, PHP, HTML5, CSS3</div>
 
-          <div><strong>Frameworks & Libraries:</strong></div>
-          <div>NestJS, Express.js, Laravel, React, NextJS, Tailwind CSS, ShadcnUI</div>
+        <div><strong>Frameworks & Libraries:</strong></div>
+        <div>NestJS, Express.js, Laravel, React, NextJS, Tailwind CSS, ShadcnUI</div>
 
-          <div><strong>Databases:</strong></div>
-          <div>MS SQL Server, MongoDB, MySQL, Redis</div>
+        <div><strong>Databases:</strong></div>
+        <div>MS SQL Server, MongoDB, MySQL, Redis</div>
 
-          <div><strong>Tools & Technologies:</strong></div>
-          <div>Git, GitHub, Docker basic, Socket.IO, GraphQL, Power BI, Figma, Postman, VS Code</div>
+        <div><strong>Tools & Technologies:</strong></div>
+        <div>Git, GitHub, Docker basic, Socket.IO, GraphQL, Power BI, Figma, Postman, VS Code</div>
 
-          <div><strong>Payment Integration:</strong></div>
-          <div>Stripe, Cryptomus</div>
+        <div><strong>Payment Integration:</strong></div>
+        <div>Stripe, Cryptomus</div>
 
-          <div><strong>Soft Skills:</strong></div>
+        <div><strong>Soft Skills:</strong></div>
+        <div>
+          Problem Solving, Team Collaboration, Communication, Time Management, Adaptability, Critical Thinking
+        </div>
+
+        <div><strong>Other:</strong></div>
+        <div>
+          RESTful API Design, Microservices Architecture, Database Design, System Integration, Agile/Scrum, CI/CD
+          basics
+        </div>
+
+        <div><strong>Languages:</strong></div>
+        <div>Vietnamese (Native), English (Basic reading comprehension)</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <div class="entry">
+        <div class="entry-header">
           <div>
-            Problem Solving, Team Collaboration, Communication, Time Management, Adaptability, Critical Thinking
+            <span class="company">GENTECH MEDIA AND TECHNOLOGY JOINT STOCK COMPANY</span>
           </div>
-
-          <div><strong>Other:</strong></div>
-          <div>
-            RESTful API Design, Microservices Architecture, Database Design, System Integration, Agile/Scrum, CI/CD
-            basics
-          </div>
-
-          <div><strong>Languages:</strong></div>
-          <div>Vietnamese (Native), English (Basic reading comprehension)</div>
+          <div class="date">June 2025 - Present</div>
         </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Professional Experience</div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Full Stack Developer</span><br />
-              <span class="company">GENTECH MEDIA AND TECHNOLOGY JOINT STOCK COMPANY</span>
-            </div>
-            <div class="date">June 2025 - Present</div>
-          </div>
-          <div class="description">
-            <ul>
-              <li>
-                Developed and maintained Accounting software system handling full software development lifecycle from
-                requirements gathering to deployment.
-              </li>
-              <li>
-                Built robust RESTful APIs using NestJS framework with MS SQL Server database for complex accounting
-                operations including multi-currency transactions and automated reconciliation.
-              </li>
-              <li>
-                Implemented responsive frontend interfaces using React with TypeScript for enhanced user experience,
-                real-time data visualization, and interactive dashboards.
-              </li>
-              <li>
-                Developed core accounting modules including document management, accounts payable/receivable tracking,
-                opening balance entry, inventory management, cost allocation, and comprehensive financial reporting.
-              </li>
-              <li>
-                Designed and created interactive dashboards and financial reports using Power BI for revenue tracking,
-                expense analysis, cash flow monitoring, and business intelligence insights with drill-down capabilities.
-              </li>
-              <li>
-                Optimized database queries and stored procedures in MS SQL Server for improved performance, implemented
-                indexing strategies, and ensured data integrity through transaction management.
-              </li>
-              <li>
-                Collaborated with accounting team to translate business requirements into technical specifications and
-                implemented automated workflows for invoice processing and payment approvals.
-              </li>
-            </ul>
-          </div>
+        <div style="margin-bottom: 3px">
+          <span class="position">Position: Full Stack Developer</span>
         </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Backend Developer</span><br />
-              <span class="company">MST Entertainment</span>
-            </div>
-            <div class="date">April 2024 - May 2025</div>
-          </div>
-          <div class="description">
-            <ul>
-              <li>
-                Developed and optimized RESTful APIs using Express.js for high-traffic applications with focus on
-                performance and scalability.
-              </li>
-              <li>
-                Integrated MongoDB for efficient data storage and management across multiple projects, implementing data
-                modeling best practices and aggregation pipelines.
-              </li>
-              <li>
-                Implemented scalable microservices architecture using NestJS framework with message queuing and
-                event-driven patterns.
-              </li>
-              <li>
-                Collaborated with frontend developers to ensure seamless API integration, data flow optimization, and
-                implemented comprehensive error handling.
-              </li>
-              <li>
-                Maintained comprehensive API documentation using Swagger/OpenAPI specifications for internal development
-                team and external partners.
-              </li>
-              <li>
-                Participated in code reviews, sprint planning, and technical discussions to improve code quality and
-                team productivity.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Projects</div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Full Stack Developer</span><br />
-              <span class="project-header">Document Management System</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">
-              Tech Stack: NestJS, MS SQL Server, React, TypeScript, Socket.IO, Tesseract.js | Team Size: 2
-            </div>
-            • Developed enterprise document management system with full-stack implementation covering frontend and
-            backend architecture.<br />
-            • Built RESTful APIs for core modules including document upload/versioning, folder management, user
-            authentication, workflow approval, and real-time notifications.<br />
-            • Designed and optimized MS SQL Server database schema with TypeORM for document metadata, access control,
-            and audit logging.<br />
-            • Implemented responsive React-based user interfaces with Ant Design for document viewing, OCR text search,
-            and collaborative features.<br />
-            • Integrated Tesseract.js OCR engine for automatic text extraction from PDF and image files with
-            multi-keyword search capabilities.<br />
-            • Developed real-time features using Socket.IO including live notifications, document comments, and
-            collaborative editing.<br />
-            • Created comprehensive role-based access control system with document/folder sharing permissions and
-            approval workflows.<br />
-            • Optimized file storage with MEGA cloud integration and implemented background processing for large
-            document uploads.
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Full Stack Developer</span><br />
-              <span class="project-header">Accounting Software</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">Tech Stack: NestJS, MS SQL Server, React, Power BI | Team Size: 4</div>
-            • Developed comprehensive accounting software system with full-stack implementation covering frontend and
-            backend.<br />
-            • Built RESTful APIs for core accounting modules including document management, accounts payable/receivable,
-            opening balance entry, inventory control, and financial reporting.<br />
-            • Designed and optimized MS SQL Server database schema with complex stored procedures for accounting
-            operations.<br />
-            • Implemented responsive React-based user interfaces for data entry, validation, and real-time updates.<br />
-            • Created interactive Power BI dashboards displaying total revenue, total expenses, and comprehensive
-            financial analytics.<br />
-            • Developed financial reports including balance sheets, income statements, and custom business intelligence
-            reports.<br />
-            • Optimized query performance and implemented data integrity controls for accounting transactions.
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Backend Developer</span><br />
-              <span class="project-header">Pixelvox AI Content Creation Platform</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">Tech Stack: NextJS, ShadcnUI, MongoDB, Web2 | Team Size: 3</div>
-            • Designed and implemented robust backend services supporting AI content generation functionalities<br />
-            • Developed reusable service modules and maintained comprehensive internal API documentation<br />
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Backend Developer</span><br />
-              <span class="project-header">TopClick Web Service</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">
-              Tech Stack: Node.js, Redis, MongoDB, Socket.IO, Cryptomus, Stripe | Team Size: 6
-            </div>
-            • Developed RESTful APIs for authentication, order tracking, and analytics modules.<br />
-            • Collaborated with frontend engineers to ensure smooth API integration and performance optimization.<br />
-            • Designed data structures for social media services (YouTube, Facebook, TikTok, etc.) and implemented full
-            order processing workflows.<br />
-            • Optimized data handling with Redis caching for high-traffic content and MongoDB for persistent storage.<br />
-            • Integrated payment gateways (Stripe, Cryptomus) and handled secure transaction processing.<br />
-            • Implemented scheduled cron jobs for system statistics and data synchronization.<br />
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Backend Developer</span><br />
-              <span class="project-header">Human Resource Management Web Application</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">Tech Stack: NestJS, MongoDB, GraphQL, NextJS, ShadcnUI | Team Size: 3</div>
-            • Built GraphQL APIs to efficiently handle complex data relationships such as employee–department–role
-            mappings.<br />
-            • Designed backend architecture for employee management modules including attendance tracking, leave
-            requests, and approval workflows.<br />
-            • Implemented role-based access control (RBAC) to manage different permission levels across the system.<br />
-            • Optimized MongoDB schema and queries to ensure responsive and scalable data operations.<br />
-            • Participated in code review and sprint planning to maintain code quality and meet release deadlines.<br />
-            • Coordinated with UI/UX team to translate business requirements into technical solutions.
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Backend Developer</span><br />
-              <span class="project-header">KeywordTool (Microservice Architecture)</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">Tech Stack: NestJS, Redis, MongoDB, Socket.IO, Stripe | Team Size: 6</div>
-            • Designed and implemented scalable backend services using microservice architecture.<br />
-            • Decomposed complex features into independent modules for enhanced scalability and maintainability.<br />
-            • Utilized Redis as message broker for asynchronous inter-service communication.<br />
-            • Established service orchestration patterns for distributed system coordination.
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Freelance Full Stack Developer</span><br />
-              <span class="project-header">Landing Page Management System - Hong Anh Computer Company</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">Tech Stack: NestJS, MongoDB, React, TypeScript, Tailwind CSS | Team Size: 2</div>
-            • Developed comprehensive landing page management system for multiple brands with drag-and-drop admin
-            interface for content management.<br />
-            • Built RESTful APIs for modular content sections including hero banners, product catalogs, testimonials,
-            news, videos, and SEO optimization.<br />
-            • Designed MongoDB schema with Mongoose ODM for flexible multi-brand content structure and automated product
-            synchronization.<br />
-            • Implemented responsive React-based admin panel with real-time preview, form validation, and media upload
-            functionality.<br />
-            • Integrated with Hong Anh Computer Company's DevOps management system for automated product sync via
-            GraphQL APIs and scheduled jobs.<br />
-            • Developed version control system for landing page changes with rollback capabilities and change tracking
-            across multiple brands.<br />
-            • Optimized performance with efficient data fetching, caching strategies, and TypeScript for enhanced code
-            reliability and scalability.
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="position">Freelance Full Stack Developer</span><br />
-              <span class="project-header">Medical Sample Collection Management System - Phacogen</span>
-            </div>
-          </div>
-          <div class="project-details">
-            <div class="tech-stack">Tech Stack: NestJS, MongoDB, React, TypeScript, Ant Design | Team Size: 2</div>
-            • Developed comprehensive medical sample collection management system with full-stack implementation
-            covering frontend and backend operations.<br />
-            • Built RESTful APIs for core modules including sample collection orders, staff assignment, clinic/bus
-            station management, supply inventory, and real-time notifications.<br />
-            • Designed and optimized MongoDB database schema with Mongoose ODM for complex medical workflow operations
-            and role-based access control.<br />
-            • Implemented responsive React-based user interfaces with TypeScript and Ant Design for data entry,
-            validation, and real-time updates.<br />
-            • Created interactive dashboards with Recharts displaying collection statistics, staff performance, and
-            comprehensive operational analytics.<br />
-            • Developed automated notification system using OneSignal push notifications and Nodemailer for email alerts
-            to stakeholders.<br />
-            • Integrated geocoding APIs for distance calculation and route optimization for sample collection staff.<br />
-            • Optimized query performance and implemented JWT-based authentication with role-based permissions for
-            secure operations.
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Education</div>
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <span class="company">FPT Polytechnic College</span>
-            </div>
-            <div class="date">Aug 2022 - Jan 2025</div>
-          </div>
-          <div class="description">
-            • Graduated with distinction (Excellent degree)<br />
-            • Major in Information Technology
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Expected Job & Work Location</div>
         <div class="description">
-          <strong>Target Job/Description:</strong> Seeking a Backend Developer role in a product-driven company where I
-          can contribute to scalable backend systems, API development, and system architecture using Node.js and NestJS.
-          Looking for opportunities to grow into a Senior Backend Developer position while collaborating with
-          cross-functional teams in an Agile environment.<br /><br />
-          <strong>Preferred:</strong> Full-time · Hanoi or Remote<br /><br />
-          I am looking for a professional and dynamic working environment that helps me enhance my technical skills,
-          maximize my potential, and achieve long-term career goals in backend development.
+          <ul>
+            <li>
+              Developed and maintained Accounting software system handling full software development lifecycle from
+              requirements gathering to deployment.
+            </li>
+            <li>
+              Built robust RESTful APIs using NestJS framework with MS SQL Server database for complex accounting
+              operations including multi-currency transactions and automated reconciliation.
+            </li>
+            <li>
+              Implemented responsive frontend interfaces using React with TypeScript for enhanced user experience,
+              real-time data visualization, and interactive dashboards.
+            </li>
+            <li>
+              Developed core accounting modules including document management, accounts payable/receivable tracking,
+              opening balance entry, inventory management, cost allocation, and comprehensive financial reporting.
+            </li>
+            <li>
+              Designed and created interactive dashboards and financial reports using Power BI for revenue tracking,
+              expense analysis, cash flow monitoring, and business intelligence insights with drill-down capabilities.
+            </li>
+            <li>
+              Optimized database queries and stored procedures in MS SQL Server for improved performance, implemented
+              indexing strategies, and ensured data integrity through transaction management.
+            </li>
+            <li>
+              Collaborated with accounting team to translate business requirements into technical specifications and
+              implemented automated workflows for invoice processing and payment approvals.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="company">MST Entertainment</span>
+          </div>
+          <div class="date">April 2024 - May 2025</div>
+        </div>
+        <div style="margin-bottom: 3px">
+          <span class="position">Position: Backend Developer</span>
+        </div>
+        <div class="description">
+          <ul>
+            <li>
+              Developed and optimized RESTful APIs using Express.js for high-traffic applications with focus on
+              performance and scalability.
+            </li>
+            <li>
+              Integrated MongoDB for efficient data storage and management across multiple projects, implementing data
+              modeling best practices and aggregation pipelines.
+            </li>
+            <li>
+              Implemented scalable microservices architecture using NestJS framework with message queuing and
+              event-driven patterns.
+            </li>
+            <li>
+              Collaborated with frontend developers to ensure seamless API integration, data flow optimization, and
+              implemented comprehensive error handling.
+            </li>
+            <li>
+              Maintained comprehensive API documentation using Swagger/OpenAPI specifications for internal development
+              team and external partners.
+            </li>
+            <li>
+              Participated in code reviews, sprint planning, and technical discussions to improve code quality and
+              team productivity.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </body>
+
+    <div class="section">
+      <div class="section-title">Projects</div>
+
+      <div class="entry">
+        <div class="project-header">Document Management System</div>
+        <div class="project-details">
+          <div style="margin-bottom: 3px">
+            <span class="position">Position: Full Stack Developer</span>
+          </div>
+          <div class="tech-stack">
+            Tech Stack: NestJS, MS SQL Server, React, TypeScript, Socket.IO, Tesseract.js | Team Size: 2
+          </div>
+          <ul>
+            <li>
+              Developed enterprise document management system with full-stack implementation covering frontend and
+              backend architecture.
+            </li>
+            <li>
+              Built RESTful APIs for core modules including document upload/versioning, folder management, user
+              authentication, workflow approval, and real-time notifications.
+            </li>
+            <li>
+              Designed and optimized MS SQL Server database schema with TypeORM for document metadata, access control,
+              and audit logging.
+            </li>
+            <li>
+              Implemented responsive React-based user interfaces with Ant Design for document viewing, OCR text
+              search, and collaborative features.
+            </li>
+            <li>
+              Integrated Tesseract.js OCR engine for automatic text extraction from PDF and image files with
+              multi-keyword search capabilities.
+            </li>
+            <li>
+              Developed real-time features using Socket.IO including live notifications, document comments, and
+              collaborative editing.
+            </li>
+            <li>
+              Created comprehensive role-based access control system with document/folder sharing permissions and
+              approval workflows.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="project-header">Accounting Software</div>
+        <div class="project-details">
+          <div style="margin-bottom: 3px">
+            <span class="position">Position: Full Stack Developer</span>
+          </div>
+          <div class="tech-stack">Tech Stack: NestJS, MS SQL Server, React, Power BI | Team Size: 4</div>
+          <ul>
+            <li>
+              Developed comprehensive accounting software system with full-stack implementation covering frontend and
+              backend.
+            </li>
+            <li>
+              Built RESTful APIs for core accounting modules including document management, accounts
+              payable/receivable, opening balance entry, inventory control, and financial reporting.
+            </li>
+            <li>
+              Designed and optimized MS SQL Server database schema with complex stored procedures for accounting
+              operations.
+            </li>
+            <li>
+              Implemented responsive React-based user interfaces for data entry, validation, and real-time updates.
+            </li>
+            <li>
+              Created interactive Power BI dashboards displaying total revenue, total expenses, and comprehensive
+              financial analytics.
+            </li>
+            <li>
+              Developed financial reports including balance sheets, income statements, and custom business
+              intelligence reports.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="project-header">Pixelvox AI Content Creation Platform</div>
+        <div class="project-details">
+          <div style="margin-bottom: 3px">
+            <span class="position">Position: Backend Developer</span>
+          </div>
+          <div class="tech-stack">Tech Stack: NextJS, ShadcnUI, MongoDB, Web2 | Team Size: 3</div>
+          <ul>
+            <li>Designed and implemented robust backend services supporting AI content generation functionalities</li>
+            <li>Developed reusable service modules and maintained comprehensive internal API documentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="project-header">TopClick Web Service</div>
+        <div class="project-details">
+          <div style="margin-bottom: 3px">
+            <span class="position">Position: Backend Developer</span>
+          </div>
+          <div class="tech-stack">
+            Tech Stack: Node.js, Redis, MongoDB, Socket.IO, Cryptomus, Stripe | Team Size: 6
+          </div>
+          <ul>
+            <li>Developed RESTful APIs for authentication, order tracking, and analytics modules.</li>
+            <li>
+              Collaborated with frontend engineers to ensure smooth API integration and performance optimization.
+            </li>
+            <li>
+              Designed data structures for social media services (YouTube, Facebook, TikTok, etc.) and implemented
+              full order processing workflows.
+            </li>
+            <li>
+              Optimized data handling with Redis caching for high-traffic content and MongoDB for persistent storage.
+            </li>
+            <li>Integrated payment gateways (Stripe, Cryptomus) and handled secure transaction processing.</li>
+            <li>Implemented scheduled cron jobs for system statistics and data synchronization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="project-header">Landing Page Management System - Hong Anh Computer Company</div>
+        <div class="project-details">
+          <div style="margin-bottom: 3px">
+            <span class="position">Position: Freelance Full Stack Developer</span>
+          </div>
+          <div class="tech-stack">Tech Stack: NestJS, MongoDB, React, TypeScript, Tailwind CSS | Team Size: 2</div>
+          <ul>
+            <li>
+              Developed comprehensive landing page management system for multiple brands with drag-and-drop admin
+              interface for content management.
+            </li>
+            <li>
+              Built RESTful APIs for modular content sections including hero banners, product catalogs, testimonials,
+              news, videos, and SEO optimization.
+            </li>
+            <li>
+              Designed MongoDB schema with Mongoose ODM for flexible multi-brand content structure and automated
+              product synchronization.
+            </li>
+            <li>
+              Implemented responsive React-based admin panel with real-time preview, form validation, and media upload
+              functionality.
+            </li>
+            <li>
+              Integrated with Hong Anh Computer Company's DevOps management system for automated product sync via
+              GraphQL APIs and scheduled jobs.
+            </li>
+            <li>
+              Developed version control system for landing page changes with rollback capabilities and change tracking
+              across multiple brands.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="project-header">Medical Sample Collection Management System - Phacogen</div>
+        <div class="project-details">
+          <div style="margin-bottom: 3px">
+            <span class="position">Position: Freelance Full Stack Developer</span>
+          </div>
+          <div class="tech-stack">Tech Stack: NestJS, MongoDB, React, TypeScript, Ant Design | Team Size: 2</div>
+          <ul>
+            <li>
+              Developed comprehensive medical sample collection management system with full-stack implementation
+              covering frontend and backend operations.
+            </li>
+            <li>
+              Built RESTful APIs for core modules including sample collection orders, staff assignment, clinic/bus
+              station management, supply inventory, and real-time notifications.
+            </li>
+            <li>
+              Designed and optimized MongoDB database schema with Mongoose ODM for complex medical workflow operations
+              and role-based access control.
+            </li>
+            <li>
+              Implemented responsive React-based user interfaces with TypeScript and Ant Design for data entry,
+              validation, and real-time updates.
+            </li>
+            <li>
+              Created interactive dashboards with Recharts displaying collection statistics, staff performance, and
+              comprehensive operational analytics.
+            </li>
+            <li>
+              Developed automated notification system using OneSignal push notifications and Nodemailer for email
+              alerts to stakeholders.
+            </li>
+            <li>
+              Integrated geocoding APIs for distance calculation and route optimization for sample collection staff.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="entry">
+        <div class="entry-header">
+          <div>
+            <span class="company">FPT Polytechnic College</span>
+          </div>
+          <div class="date">Aug 2022 - Jan 2025</div>
+        </div>
+        <div class="description">
+          <ul>
+            <li>Graduated with distinction (Excellent degree)</li>
+            <li>Major in Information Technology</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Expected Job & Work Location</div>
+      <div class="description">
+        <strong>Target Job/Description:</strong>
+        Seeking a Backend Developer or Full Stack Developer role in a product-driven company where I can contribute to
+        scalable web applications, backend systems, and API development. Looking for opportunities to grow into a
+        Senior Developer position and collaborate with cross-functional teams in an Agile environment. Preferred:
+        Full-time · Hanoi or Remote<br />
+        Professional and dynamic working environment.<br />
+        Promote my technical skills, personal growth, and long-term career goals.
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
